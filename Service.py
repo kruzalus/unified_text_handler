@@ -2,11 +2,14 @@ import spacy
 import time
 import html
 
+nlp1 = spacy.load("en_core_web_sm")
+nlp2 = spacy.load("ru_core_news_sm")
+
 
 class Service:
 	def __init__(self):
-		self.nlp1 = spacy.load("en_core_web_sm")
-		self.nlp2 = spacy.load("ru_core_news_sm")
+		self.nlp1 = nlp1
+		self.nlp2 = nlp2
 
 	def get_shortened_text(self, text):
 		print("inside get_shortened_text")
